@@ -1,0 +1,30 @@
+{
+  "name": "beeldbuis",
+  "description": "beeldbuis website",
+  "version": "0.0.1",
+  "private": true,
+  "author": "FHICT Delta",
+  "license": "ISC",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://git.fhict.nl/delta-projecten/beeldbuis-website.git"
+  },
+  "scripts": {
+    "app": "nodemon server.js",
+    "open": "open http://127.0.0.1:25565/scharrel-z1vxv4edBoDOjQtteeqXXC9JxpWtHski",
+    "test": "concurrently --kill-others \"yarn run app\" \"http-server\""
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.1",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0",
+    "mysql": "^2.13.0",
+    "pug": "^2.0.0-beta11",
+    "serve-favicon": "~2.3.2",
+    "socket.io": "^1.7.3"
+  }
+}

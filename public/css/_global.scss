@@ -1,0 +1,14 @@
+$gray: #919191;
+$gray-light: #D6D6D6;
+
+$chat-padding: 10px;
+$chat-fontsize: 20px;
+
+$chat-font: 'Helvetica', 'Open Sans', sans-serif;
+
+body {
+  font-family: $chat-font;
+  font-size: $chat-fontsize;
+  font-weight: bold;
+  color: $gray-light;
+}

@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, user-scalable=no")
+        title Scharrel App
+        link(rel="stylesheet", href="css/scharrel.css")
+        script(
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous")
+        script(src="/socket.io/socket.io.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js")
+        script(src="chat.js")
+    body
+        main#page-chat
+            section#chat-name
+                div#pic-chat
+            section#chat-entries
+            section#chat-input
+                input(type='text' placeholder='...' maxlength='1000')#messageInput
+            a#chat-down

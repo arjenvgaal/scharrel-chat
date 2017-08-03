@@ -1,0 +1,100 @@
+$pic-message-size: 50px;
+
+#page-chat {
+  padding: $chat-padding;
+}
+
+.pic-message, #pic-chat {
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.pic-message {
+  height: $pic-message-size;
+  width: $pic-message-size;
+}
+
+#pic-chat {
+  height: 100px;
+  width: 100px;
+  margin: $chat-padding 0;
+}
+
+.chat-entry, #chat-name {
+  > * {
+    display: inline-block;
+  }
+}
+
+#chat-name > * {
+  vertical-align: middle;
+}
+
+.chat-entry > * {
+  vertical-align: top;
+}
+
+.chat-entry > p {
+  padding: 0 10px;
+  padding-top: 15px;
+  width: calc(75% - #{$pic-message-size});
+  word-wrap: break-word;
+}
+#chat-name > p { padding: 0 20px; }
+
+#chat-name, #chat-input {
+  width: calc(100% - (#{$chat-padding} * 2));
+  position: fixed;
+  background-color: white;
+}
+
+#chat-name {
+  top: 0;
+  border-bottom: 3px solid $gray;
+
+  color: $gray;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#chat-entries {
+  // TODO: Solve these magic numbers
+  margin-top: 123px;
+  margin-bottom: 70px;
+}
+#chat-input {
+  bottom: 0;
+  padding: $chat-padding 0;
+
+  > input {
+    $input-border: 1px;
+    $input-padding: 20px;
+
+    width: calc(100% - ((#{$input-border} + #{$input-padding}) * 2));
+    padding: 12px $input-padding;
+    border: $input-border solid $gray-light;
+    border-radius: 4px;
+    margin: 0;
+
+    font-family: $chat-font;
+    font-size: $chat-fontsize;
+    font-weight: bold;
+    color: $gray-light;
+  }
+}
+
+.chat-entry {
+  padding: $chat-padding 0;
+}
+
+#chat-down {
+  position: fixed;
+  display: none;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 50px;
+  width: 50px;
+  background-image: url('../img/down-button2.svg');
+}
